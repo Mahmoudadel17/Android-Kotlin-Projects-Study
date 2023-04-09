@@ -13,4 +13,23 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="operatorbutton" parent="commonbutton">
+        <item name="android:textColor">@color/btnBackground2</item>
+    </style>
+
+    <style name="digitbutton" parent="commonbutton">
+
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="commonbutton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+
+        <item name="cornerRadius">36dp</item>
+        <item name="android:layout_weight">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="backgroundTint">@color/white</item>
+
+    </style>
+
 </resources>
