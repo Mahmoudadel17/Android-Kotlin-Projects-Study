@@ -48,8 +48,10 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="C"
+                android:textColor="@color/btnBackground2"
+
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -58,8 +60,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                app:icon="@drawable/ic_baseline_backspace_24"
+                app:iconTint="@color/btnBackground2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -68,9 +71,10 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="%"
                 android:textSize="32dp"
+                android:textColor="@color/btnBackground2"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -78,9 +82,10 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="/"
                 android:textSize="32dp"
+                android:textColor="@color/btnBackground2"
                 app:cornerRadius="36dp" />
 
         </LinearLayout>
@@ -96,7 +101,7 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/btnBackground"
                 android:text="7"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -106,7 +111,7 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/btnBackground"
                 android:text="8"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -116,7 +121,7 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/btnBackground"
                 android:text="9"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -126,8 +131,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="*"
+                android:textColor="@color/btnBackground2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -145,8 +151,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="4"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -155,8 +161,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="5"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -165,8 +171,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="6"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -175,9 +181,10 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="+"
                 android:textSize="32dp"
+                android:textColor="@color/btnBackground2"
                 app:cornerRadius="36dp" />
 
         </LinearLayout>
@@ -193,7 +200,7 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/btnBackground"
                 android:text="1"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -203,8 +210,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -213,8 +220,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="3"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -223,8 +230,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="-"
+                android:textColor="@color/btnBackground2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -242,8 +250,19 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="AC"
+                android:textSize="20dp"
+                android:textColor="@color/btnBackground2"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/btnBackground"
+                android:text="0"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -252,8 +271,8 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="."
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -262,18 +281,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
-                android:textSize="32dp"
-                app:cornerRadius="36dp" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="12dp"
-                android:backgroundTint="@color/white"
-                android:text="1"
+                android:backgroundTint="@color/btnBackground"
+                android:text="="
+                android:textColor="@color/btnBackground2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
