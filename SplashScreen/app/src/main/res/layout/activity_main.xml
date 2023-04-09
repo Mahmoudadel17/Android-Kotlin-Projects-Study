@@ -9,7 +9,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="warp_content"
-        android:text="6755"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="12dp"
+        android:texeSize="28dp"
+        android:text="200+55"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +27,9 @@
         android:textAlignment="viewEnd"
         android:layout_marginEnd="12dp"
         android:texeSize="28dp"
-        android:text="24+54"
-        android:textColor="@color/black"
+        android:visibility="gone"
+        android:text="=255"
+        android:textColor="#686868"
         app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -61,10 +65,11 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_clear"
                 android:backgroundTint="@color/btnBackground"
                 android:text="C"
                 android:textColor="@color/btnBackground2"
-
+                android:onClick="onClearClic"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -73,9 +78,11 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_back"
                 android:backgroundTint="@color/btnBackground"
                 app:icon="@drawable/ic_baseline_backspace_24"
                 app:iconTint="@color/btnBackground2"
+                android:onClick="onBackClic"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -84,10 +91,12 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_modulo"
                 android:backgroundTint="@color/btnBackground"
                 android:text="%"
                 android:textSize="32dp"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onOperatorClic"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -95,10 +104,12 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_divide"
                 android:backgroundTint="@color/btnBackground"
                 android:text="/"
                 android:textSize="32dp"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onOperatorClic"
                 app:cornerRadius="36dp" />
 
         </LinearLayout>
@@ -114,7 +125,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_7"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="7"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -124,7 +137,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_8"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="8"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -134,7 +149,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_9"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="9"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -144,9 +161,11 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_multiple"
                 android:backgroundTint="@color/btnBackground"
                 android:text="*"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onOperatorClic"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -164,7 +183,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_4"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="4"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -174,7 +195,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_5"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="5"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -184,7 +207,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_6"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="6"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -194,10 +219,12 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_add"
                 android:backgroundTint="@color/btnBackground"
                 android:text="+"
                 android:textSize="32dp"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onOperatorClic"
                 app:cornerRadius="36dp" />
 
         </LinearLayout>
@@ -213,7 +240,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_1"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="1"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -223,7 +252,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_2"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="2"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -233,7 +264,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_3"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="3"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -243,9 +276,11 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_subtract"
                 android:backgroundTint="@color/btnBackground"
                 android:text="-"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onOperatorClic"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
@@ -263,10 +298,12 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_allclear"
                 android:backgroundTint="@color/btnBackground"
                 android:text="AC"
                 android:textSize="20dp"
                 android:textColor="@color/btnBackground2"
+                android:onClick="onAllclearClic"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -274,7 +311,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_0"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="0"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -284,7 +323,9 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_dot"
                 android:backgroundTint="@color/btnBackground"
+                android:onClick="onDigitClic"
                 android:text="."
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
@@ -294,9 +335,11 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
+                android:id="@+id/btn_equal"
                 android:backgroundTint="@color/btnBackground"
                 android:text="="
                 android:textColor="@color/btnBackground2"
+                android:onClick="onEqualClic"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />
 
