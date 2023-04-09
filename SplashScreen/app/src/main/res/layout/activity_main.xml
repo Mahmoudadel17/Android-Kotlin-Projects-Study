@@ -21,13 +21,26 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="warp_content"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="12dp"
+        android:texeSize="28dp"
         android:text="24+54"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/linerLayout"
+        app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/linecolor"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_marginBottom="12dp"
+        />
+
     <LinearLayout
-        android:id="@+id/linerLayout"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="warp_content"
         android:orientation="vertical"
