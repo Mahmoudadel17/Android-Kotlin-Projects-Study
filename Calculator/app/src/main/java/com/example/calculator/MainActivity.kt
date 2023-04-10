@@ -1,6 +1,8 @@
 package com.example.calculator
 
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,6 +28,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        val configuration = Resources.getSystem().configuration
+        val uiModeFlags = configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        val isNightMode = uiModeFlags == Configuration.UI_MODE_NIGHT_YES
+
+        if (isNightMode) {
+            // The device is in dark mode
+            setTheme(R.style.myThemedark)
+        } else {
+            // The device is not in dark mode
+            setTheme(R.style.myTheme)
+        }
+
+
         setContentView(binding.root)
     }
 
@@ -108,6 +123,13 @@ class MainActivity : AppCompatActivity() {
                 stateError = true
                 lastNumeric = false
             }
+        }
+    }
+
+    fun onDotClic(view: android.view.View) {
+
+        if(binding.dataTv.text.isNotEmpty() && binding.dataTv.text.toString().last().isDigit()){
+            binding.dataTv.append((view as Button).text)
         }
     }
 }

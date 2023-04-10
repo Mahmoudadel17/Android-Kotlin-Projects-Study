@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="myTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/linecolor</item>
+        <item name="colorOnPrimary">@color/btnBackground2</item>
+        <item name="colorSecondary">@color/black</item>
+    </style>
+
+    <style name="myThemedark" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="colorPrimary">@color/backgrounddark</item>
+        <item name="colorPrimaryVariant">@color/backgrounddark2</item>
+        <item name="colorOnPrimary">@color/btnBackground2dark</item>
+        <item name="colorSecondary">@color/white</item>
+    </style>
+</resources>

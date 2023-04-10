@@ -8,11 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="backgrounddark">#2C3333</color>
 
     <color name="linecolor">#DAD8D8</color>
     <color name="btnBackground">#FFFFFF</color>
     <color name="btnBackground2">#FF9800</color>
 
+    <color name="backgrounddark">#2C3333</color>
+    <color name="backgrounddark2">#2C3339</color>
     <color name="btnBackground2dark">#0E8388</color>
 </resources>
