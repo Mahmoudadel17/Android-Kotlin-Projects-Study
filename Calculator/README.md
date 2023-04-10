@@ -3,7 +3,7 @@
 - simple android calculator 
 
 ## Screenshots
-![3bb903dd-2549-4878-8fe3-64efbf4d82f7](https://user-images.githubusercontent.com/100792508/230815832-94875092-927e-4ee1-9c43-4f72ecabb752.jpg)
+![6e6d8496-cf7a-47c7-a51b-0804041b653a](https://user-images.githubusercontent.com/100792508/230816288-670c1bb3-a0f2-4b7a-b3d7-7ef958b8ab39.jpg)
 
 ## Authors
 
