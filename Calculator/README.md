@@ -7,7 +7,7 @@
 - Light
 
 
-![6e6d8496-cf7a-47c7-a51b-0804041b653a](https://user-images.githubusercontent.com/100792508/230816288-670c1bb3-a0f2-4b7a-b3d7-7ef958b8ab39.jpg)
+![1d81f232-bbb2-4be2-95b4-91a13aca2fe5](https://user-images.githubusercontent.com/100792508/230940082-7ff49d73-4f65-4388-aa64-d0c035c18c65.jpg)
 
 - Dark
 
