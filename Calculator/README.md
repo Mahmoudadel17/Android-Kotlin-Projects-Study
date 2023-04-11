@@ -7,12 +7,13 @@
 - Light
 
 
-![1d81f232-bbb2-4be2-95b4-91a13aca2fe5](https://user-images.githubusercontent.com/100792508/230940082-7ff49d73-4f65-4388-aa64-d0c035c18c65.jpg)
+![2023-04-11 19_00_27-7cee1f81-e04d-48ba-abdc-d9dea3ea8584 jpg ‎- Photos](https://user-images.githubusercontent.com/100792508/231236615-123fa718-42bc-49bc-9eaf-be0e9491096c.png)
+
 
 - Dark
 
 
-![f44fc064-2729-4e74-b512-21a1b98948d0](https://user-images.githubusercontent.com/100792508/230939479-89bc9efa-b274-40dc-bc91-ac206feffea8.jpg)
+![2023-04-11 19_01_00-93c67177-1a49-412a-ab08-df34176beb09 jpg ‎- Photos](https://user-images.githubusercontent.com/100792508/231236649-aea68d37-f9d8-4876-990d-41c830e12a32.png)
 
 ## Authors
 
