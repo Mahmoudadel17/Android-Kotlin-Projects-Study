@@ -228,6 +228,7 @@ class MainActivity : AppCompatActivity() {
                 binding.btn9.text = "X"
                 checkPlayer=true
                 binding.btn9.setTextColor(ContextCompat.getColor(this,R.color.backgroundX))
+
                 if (checkWinner("X")){
                     win_X()
                 }
@@ -272,6 +273,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun win_O(){
+
         // do some thing when o winner
         alert_O()
         playerOScore++
@@ -287,10 +289,13 @@ class MainActivity : AppCompatActivity() {
             textViewO.text = "Player O Score : $playerOScore  \uD83D\uDC7F"
             textViewX.text = "Player X Score : $playerXScore  \uD83D\uDC7F"
         }
+        Handler(Looper.getMainLooper()).postDelayed({
+        }, DIALOG_DURATION.toLong())
         // reset
         reset()
     }
     private fun win_X(){
+
         // do some thing when o winner
         alert_X()
         playerXScore++
@@ -310,6 +315,8 @@ class MainActivity : AppCompatActivity() {
             textViewO.text = "Player O Score : $playerOScore  \uD83D\uDC7F"
 
         }
+        Handler(Looper.getMainLooper()).postDelayed({
+        }, DIALOG_DURATION.toLong())
         // reset
         reset()
     }
