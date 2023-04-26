@@ -9,9 +9,14 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="backgroundLight">#FEFCF3</color>
-    <color name="backgroundDark">#3E4F5F</color>
+    <color name="backgroundDark">#474E68</color>
 
     <color name="backgroundX">#2E8388</color>
     <color name="backgroundO">#E49393</color>
+
+    <color name="backgroundButtonLight">#F5EBE0</color>
+    <color name="backgroundButtonLight2">#577D86</color>
+
+    <color name="backgroundButtonDark">#404258</color>
 
 </resources>
