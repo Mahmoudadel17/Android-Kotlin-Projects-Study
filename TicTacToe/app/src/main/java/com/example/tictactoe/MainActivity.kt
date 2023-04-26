@@ -289,8 +289,7 @@ class MainActivity : AppCompatActivity() {
             textViewO.text = "Player O Score : $playerOScore  \uD83D\uDC7F"
             textViewX.text = "Player X Score : $playerXScore  \uD83D\uDC7F"
         }
-        Handler(Looper.getMainLooper()).postDelayed({
-        }, DIALOG_DURATION.toLong())
+
         // reset
         reset()
     }
@@ -315,8 +314,7 @@ class MainActivity : AppCompatActivity() {
             textViewO.text = "Player O Score : $playerOScore  \uD83D\uDC7F"
 
         }
-        Handler(Looper.getMainLooper()).postDelayed({
-        }, DIALOG_DURATION.toLong())
+
         // reset
         reset()
     }
