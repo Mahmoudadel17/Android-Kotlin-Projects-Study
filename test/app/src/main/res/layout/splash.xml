@@ -10,17 +10,18 @@ tools:context=".SplashScreen">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="To Do"
+    android:text="@string/to_do"
     android:layout_gravity="center_horizontal"
     android:textColor="?attr/colorOnSecondary"
     android:textSize="40sp"
     android:fontFamily="sans-serif"/>
+
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Manage Your Day"
+    android:text="@string/splash_text"
     android:layout_gravity="center_horizontal"
-    android:textColor="#AA9988"
+    android:textColor="@color/textSplash"
     android:layout_marginTop="10dp"
     android:textSize="16sp"
     android:letterSpacing="0.3"
