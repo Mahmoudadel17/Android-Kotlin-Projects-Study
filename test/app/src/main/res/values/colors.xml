@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    // splash screen
     <color name="splash">#474E68</color>
     <color name="textSplash">#AA9988</color>
 
-    
+    // home info
+    <color name="homeTextViewBackgroundLight">#E9F8F9</color>
+    <color name="homeTextViewBackgroundDark">#6B728E</color>
 
 </resources>
