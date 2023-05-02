@@ -24,16 +24,9 @@ xmlns:tools="http://schemas.android.com/tools"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:src="@drawable/download"
+
                 />
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="?attr/colorSecondary"
-                android:padding="15dp"
-                android:text="Enter your Info"
-                android:textSize="22sp" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -51,6 +44,7 @@ xmlns:tools="http://schemas.android.com/tools"
                 android:background="@drawable/corner"
                 android:padding="15dp"
                 android:hint="UserName"
+                android:drawableEnd="@drawable/ic_baseline_person_24"
 
 
                 />
@@ -71,7 +65,7 @@ xmlns:tools="http://schemas.android.com/tools"
                 android:background="@drawable/corner"
                 android:padding="15dp"
                 android:hint="email"
-
+                android:drawableEnd="@drawable/ic_baseline_email_24"
 
                 />
             <TextView
@@ -91,6 +85,8 @@ xmlns:tools="http://schemas.android.com/tools"
                 android:background="@drawable/corner"
                 android:padding="15dp"
                 android:hint="password"
+                android:drawableEnd="@drawable/ic_baseline_visibility_off_24"
+                android:inputType="textPassword"
                 />
 
             <com.google.android.material.button.MaterialButton
