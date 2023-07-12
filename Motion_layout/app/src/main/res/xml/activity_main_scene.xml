@@ -18,7 +18,7 @@
         <Constraint
             android:id="@+id/text1"
             android:layout_width="match_parent"
-            android:layout_height="100dp  "
+            android:layout_height="100dp"
             android:rotation="90"
             android:alpha="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
