@@ -2,4 +2,7 @@
     <string name="app_name">test</string>
     <string name="to_do">TO DO</string>
     <string name="splash_text">Manage Your Day</string>
+
+    <string name="underlined_text"><![CDATA[New to the app? <u>Register</u>]]></string>
+
 </resources>

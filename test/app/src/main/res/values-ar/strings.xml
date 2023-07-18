@@ -3,4 +3,7 @@
     <string name="app_name">تجربة</string>
     <string name="to_do">مهماتي</string>
     <string name="splash_text">قم بإدارة يومك</string>
+
+    <string name="underlined_text"><![CDATA[New to the app? <u>تسجيل</u>]]></string>
+
 </resources>

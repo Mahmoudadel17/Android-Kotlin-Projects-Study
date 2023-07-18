@@ -7,85 +7,46 @@ import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.text.Html
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.*
 
-class MainActivity : AppCompatActivity() {
-    private var doubleBackToExitPressedOnce = false
+class MainActivity2 : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
+    private var doubleBackToExitPressedOnce = false
 
-
-    lateinit var editTextUserName: EditText
-    lateinit var editTextEmail: EditText
-    lateinit var editTextPassword: EditText
-    lateinit var textViewLogin:TextView
-    lateinit var buttonSubmit:Button
+    lateinit var textViewRegister: TextView
+    lateinit var textViewForgotPassword: TextView
+    lateinit var editTextPassword:EditText
+    lateinit var editTextEmail:EditText
+    lateinit var buttonLogin:Button
 
     private lateinit var visibilityToggleImageViewPassword: ImageView
     private var isPasswordVisible = false
 
-    lateinit var userName:String
     lateinit var email:String
     lateinit var password:String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        editTextUserName = findViewById(R.id.edit_text_username)
-        editTextEmail = findViewById(R.id.edit_text_email)
-        editTextPassword = findViewById(R.id.edit_text_password)
-        buttonSubmit = findViewById(R.id.btn_submit)
+        editTextPassword = findViewById(R.id.editTextPassword)
+        textViewForgotPassword = findViewById(R.id.textViewForgotPassword)
+        textViewRegister = findViewById(R.id.textViewRegister)
+        buttonLogin = findViewById(R.id.buttonLogin)
+        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
 
 
         // make under line for text that can be clickable
         //----------------------------------------------------
-        textViewLogin = findViewById(R.id.textViewLogin)
-        textViewLogin.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
-
-
-
-
-        // when user click Sign Up button
-        buttonSubmit.setOnClickListener {
-
-            userName = editTextUserName.text.toString()
-            email = editTextEmail.text.toString()
-            password = editTextPassword.text.toString()
-
-
-
-            if (userName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && password.length>8){
-                Toast.makeText(this,"Welcome $userName ^_^",Toast.LENGTH_SHORT).show()
-                val intent = Intent(this,HomeActivity::class.java)
-
-                val editor = sharedPreferences.edit()
-                editor.putBoolean("LoginCompleted", false)
-                editor.apply()
-
-                startActivity(intent)
-                finish()
-
-            }else{
-                Toast.makeText(this,
-                    "Please make sure you enter correct information!",
-                    Toast.LENGTH_SHORT).show()
-            }
-
-
-
-
-        }
+        textViewRegister.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
+        textViewForgotPassword.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
 
 
 
         // when user click on icon visibility to show or hide password
-        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
-
         visibilityToggleImageViewPassword.setOnClickListener{
             isPasswordVisible = !isPasswordVisible
 
@@ -108,6 +69,31 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+        // when user click on Login button
+        buttonLogin.setOnClickListener {
+            email = editTextEmail.text.toString()
+            password = editTextPassword.text.toString()
+
+            if ( email.isNotEmpty() && password.isNotEmpty() && password.length>8){
+                Toast.makeText(this,"Welcome 'user name'  ^_^",Toast.LENGTH_SHORT).show()
+                val intent = Intent(this,HomeActivity::class.java)
+
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("LoginCompleted",false)
+            editor.apply()
+
+                startActivity(intent)
+                finish()
+
+            }else{
+                Toast.makeText(this,
+                    "Please make sure you enter correct information!",
+                    Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
     }
 
 
@@ -125,10 +111,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun onLoginClicked(view: android.view.View) {
-        val intent = Intent(this,MainActivity2::class.java)
+    fun onRegisterClicked(view: android.view.View) {
+        val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
         finish()
     }
-}
 
+    fun onForgotClicked(view: android.view.View) {
+
+    }
+
+
+}

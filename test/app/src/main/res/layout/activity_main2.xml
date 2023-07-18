@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MainActivity2"
     android:background="@color/white">
 
 
@@ -22,46 +22,23 @@
 
 
             <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="250dp"
+                android:layout_width="300dp"
                 android:layout_height="230dp"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                app:lottie_rawRes="@raw/signup"
+                app:lottie_rawRes="@raw/login"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
 
                 />
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:layout_marginLeft="10dp"
-                android:text="User Name"
-                android:textColor="#474E68"
-                android:textSize="22sp" />
 
-            <EditText
-                android:id="@+id/edit_text_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/corner"
-                android:padding="15dp"
-                android:hint="UserName"
-                android:inputType="text"
-                android:textColor="@color/homeTextViewBackgroundDark"
-                android:textColorHint="@color/homeTextViewBackgroundDark"
-                android:drawableEnd="@drawable/ic_baseline_person_24"
-                android:drawableTint="#474E68"
-                android:textDirection="ltr"
-                />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:text="Email"
                 android:textColor="#474E68"
@@ -80,7 +57,6 @@
                 android:textColor="@color/homeTextViewBackgroundDark"
                 android:drawableEnd="@drawable/ic_baseline_email_24"
                 android:drawableTint="#474E68"
-                android:textDirection="ltr"
                 />
             <TextView
                 android:id="@+id/textView4"
@@ -99,7 +75,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/edit_text_password"
+                    android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -109,9 +85,7 @@
                     android:textColor="@color/homeTextViewBackgroundDark"
                     android:textColorHint="@color/homeTextViewBackgroundDark"
                     android:inputType="textPassword"
-                    android:textDirection="ltr"
-
-                />
+                    />
 
                 <ImageView
                     android:id="@+id/visibilityToggleImageViewPassword"
@@ -126,17 +100,15 @@
 
 
 
-
-
             <com.google.android.material.button.MaterialButton
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/btn_submit"
+                android:layout_marginTop="132dp"
+                android:id="@+id/buttonLogin"
                 android:layout_gravity="center"
                 android:background="@drawable/corner"
-                android:text="Sign Up"
+                android:text="Login"
                 android:textColor="#474E68"
                 android:textSize="32dp"
                 />
@@ -151,22 +123,35 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:layout_marginLeft="10dp"
-                    android:text="You already registered?"
-
+                    android:text="New to the app?"
                     android:textColor="#474E68"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/textViewLogin"
+                    android:id="@+id/textViewRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:layout_marginLeft="180dp"
-                    android:text="Login"
+                    android:layout_marginLeft="130dp"
+                    android:text="Register"
                     android:textColor="#474E68"
                     android:textSize="12sp"
                     android:clickable="true"
-                    android:onClick="onLoginClicked"
+                    android:onClick="onRegisterClicked"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:layout_marginLeft="220dp"
+                    android:text="Forgot password?"
+                    android:textColor="#474E68"
+                    android:textSize="12sp"
+                    android:clickable="true"
+                    android:onClick="onForgotClicked"
+
                     />
 
 
