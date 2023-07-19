@@ -1,0 +1,5 @@
+<!-- cursor_color.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="2dp" />
+    <solid android:color="#474E68" /> <!-- Replace with your desired cursor color -->
+</shape>

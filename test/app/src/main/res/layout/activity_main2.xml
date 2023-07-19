@@ -57,7 +57,18 @@
                 android:textColor="@color/homeTextViewBackgroundDark"
                 android:drawableEnd="@drawable/ic_baseline_email_24"
                 android:drawableTint="#474E68"
+                android:textCursorDrawable="@drawable/cursor_color"
                 />
+            <TextView
+                android:id="@+id/textInputErrorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Please enter your email"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:textSize="13sp" />
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
@@ -85,6 +96,7 @@
                     android:textColor="@color/homeTextViewBackgroundDark"
                     android:textColorHint="@color/homeTextViewBackgroundDark"
                     android:inputType="textPassword"
+                    android:textCursorDrawable="@drawable/cursor_color"
                     />
 
                 <ImageView
@@ -97,7 +109,16 @@
                     app:tint="#474E68" />
 
             </FrameLayout>
-
+            <TextView
+                android:id="@+id/textInputErrorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Please enter your password"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:textSize="13sp" />
 
 
             <com.google.android.material.button.MaterialButton
@@ -105,6 +126,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="132dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:id="@+id/buttonLogin"
                 android:layout_gravity="center"
                 android:background="@drawable/corner"
@@ -114,7 +137,9 @@
                 />
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                >
 
                 <TextView
                     android:id="@+id/textView5"

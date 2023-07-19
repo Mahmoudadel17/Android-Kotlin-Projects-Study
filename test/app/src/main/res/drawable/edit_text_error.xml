@@ -1,0 +1,27 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Original background shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="32dp" />
+            <solid android:color="?attr/colorSecondary" />
+        </shape>
+    </item>
+
+    <!-- Error frame for the red border -->
+    <item
+        android:id="@+id/error_frame"
+        android:bottom="2dp"
+        android:right="2dp"
+        android:left="2dp"
+        android:top="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" />
+            <stroke
+                android:width="1dp"
+                android:color="#FF0000" /> <!-- Red color for the frame -->
+            <!-- You can adjust the width and color as needed -->
+        </shape>
+    </item>
+
+</layer-list>

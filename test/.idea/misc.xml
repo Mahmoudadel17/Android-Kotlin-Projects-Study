@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable/corner.xml" value="0.28489583333333335" />
+        <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable/cursor_color.xml" value="0.19479166666666667" />
+        <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable/edit_text_error.xml" value="0.15925925925925927" />
         <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.19074074074074074" />
+        <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17962962962962964" />
         <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/E.J.S/Desktop/repo/Android-Kotlin-Projects-Study/test/app/src/main/res/layout/activity_main2.xml" value="0.25" />

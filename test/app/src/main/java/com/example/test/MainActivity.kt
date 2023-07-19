@@ -7,12 +7,14 @@ import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.text.Html
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.*
 
+
 class MainActivity : AppCompatActivity() {
+    private val instanceCommon = Common()
+
     private var doubleBackToExitPressedOnce = false
     private lateinit var sharedPreferences: SharedPreferences
 
@@ -20,6 +22,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var editTextUserName: EditText
     lateinit var editTextEmail: EditText
     lateinit var editTextPassword: EditText
+    lateinit var textViewErrorUserName:TextView
+    lateinit var textViewErrorEmail:TextView
+    lateinit var textViewErrorPassword:TextView
     lateinit var textViewLogin:TextView
     lateinit var buttonSubmit:Button
 
@@ -35,20 +40,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        editTextUserName = findViewById(R.id.edit_text_username)
-        editTextEmail = findViewById(R.id.edit_text_email)
-        editTextPassword = findViewById(R.id.edit_text_password)
-        buttonSubmit = findViewById(R.id.btn_submit)
-
+        init()
 
         // make under line for text that can be clickable
         //----------------------------------------------------
-        textViewLogin = findViewById(R.id.textViewLogin)
         textViewLogin.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
-
-
-
 
         // when user click Sign Up button
         buttonSubmit.setOnClickListener {
@@ -58,22 +54,28 @@ class MainActivity : AppCompatActivity() {
             password = editTextPassword.text.toString()
 
 
+            instanceCommon.upDateEditTexts(editTextUserName,editTextEmail,editTextPassword)
+            instanceCommon.upDateTextViews(textViewErrorUserName,textViewErrorEmail,textViewErrorPassword)
 
-            if (userName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && password.length>8){
-                Toast.makeText(this,"Welcome $userName ^_^",Toast.LENGTH_SHORT).show()
+            if (userName.isEmpty()){
+                instanceCommon.userNameError(editTextUserName,textViewErrorUserName)
+            }
+            if (email.isEmpty() || !instanceCommon.isValidEmail(email)){
+                instanceCommon.emailError(editTextEmail,textViewErrorEmail)
+            }
+            if (password.isEmpty() || password.length < 8){
+                instanceCommon.passwordError(editTextPassword,textViewErrorPassword)
+            }
+            else if(userName.isNotEmpty() && email.isNotEmpty()
+                && instanceCommon.isValidEmail(email)
+                && password.isNotEmpty() && password.length > 8)
+                {
+                instanceCommon.toastWelcome(this,userName)
+                instanceCommon.makeLoginCompletedTrue(sharedPreferences)
                 val intent = Intent(this,HomeActivity::class.java)
-
-                val editor = sharedPreferences.edit()
-                editor.putBoolean("LoginCompleted", false)
-                editor.apply()
-
                 startActivity(intent)
                 finish()
 
-            }else{
-                Toast.makeText(this,
-                    "Please make sure you enter correct information!",
-                    Toast.LENGTH_SHORT).show()
             }
 
 
@@ -81,11 +83,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
         // when user click on icon visibility to show or hide password
-        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
-
         visibilityToggleImageViewPassword.setOnClickListener{
             isPasswordVisible = !isPasswordVisible
 
@@ -113,9 +111,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
+    private fun init(){
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
+        textViewLogin = findViewById(R.id.textViewLogin)
+        editTextUserName = findViewById(R.id.edit_text_username)
+        editTextEmail = findViewById(R.id.edit_text_email)
+        editTextPassword = findViewById(R.id.edit_text_password)
+        textViewErrorUserName = findViewById(R.id.textInputErrorUserName)
+        textViewErrorEmail = findViewById(R.id.textInputErrorEmail)
+        textViewErrorPassword = findViewById(R.id.textInputErrorPassword)
+        buttonSubmit = findViewById(R.id.btn_submit)
+    }
+
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            super.onBackPressed()
             finishAffinity() //This will exit the app
         } else {
             doubleBackToExitPressedOnce = true

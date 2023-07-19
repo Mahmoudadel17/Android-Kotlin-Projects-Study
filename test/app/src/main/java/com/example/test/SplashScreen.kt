@@ -13,14 +13,13 @@ class SplashScreen : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?,) {
         super.onCreate(savedInstanceState)
-        window.setBackgroundDrawableResource(R.color.black)
         setContentView(R.layout.splash)
 
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
 
         Handler().postDelayed({
-                      if (sharedPreferences.getBoolean("LoginCompleted",true)){
+                      if (!sharedPreferences.getBoolean("LoginCompleted",false)){
                           startMainActivity()
                       }else{
                           startHomeActivity()

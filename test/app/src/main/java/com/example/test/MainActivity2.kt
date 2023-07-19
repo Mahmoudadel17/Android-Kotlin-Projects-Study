@@ -12,6 +12,8 @@ import android.text.method.PasswordTransformationMethod
 import android.widget.*
 
 class MainActivity2 : AppCompatActivity() {
+    private val instanceCommon = Common()
+
     private lateinit var sharedPreferences: SharedPreferences
     private var doubleBackToExitPressedOnce = false
 
@@ -19,6 +21,8 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var textViewForgotPassword: TextView
     lateinit var editTextPassword:EditText
     lateinit var editTextEmail:EditText
+    lateinit var textViewErrorEmail:TextView
+    lateinit var textViewErrorPassword:TextView
     lateinit var buttonLogin:Button
 
     private lateinit var visibilityToggleImageViewPassword: ImageView
@@ -31,19 +35,11 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        editTextPassword = findViewById(R.id.editTextPassword)
-        textViewForgotPassword = findViewById(R.id.textViewForgotPassword)
-        textViewRegister = findViewById(R.id.textViewRegister)
-        buttonLogin = findViewById(R.id.buttonLogin)
-        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
-
-
+        init()
         // make under line for text that can be clickable
         //----------------------------------------------------
         textViewRegister.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
         textViewForgotPassword.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
-
 
 
         // when user click on icon visibility to show or hide password
@@ -69,39 +65,52 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
-
         // when user click on Login button
         buttonLogin.setOnClickListener {
             email = editTextEmail.text.toString()
             password = editTextPassword.text.toString()
 
-            if ( email.isNotEmpty() && password.isNotEmpty() && password.length>8){
-                Toast.makeText(this,"Welcome 'user name'  ^_^",Toast.LENGTH_SHORT).show()
+            instanceCommon.upDateEditTexts(editTextEmail,editTextPassword)
+            instanceCommon.upDateTextViews(textViewErrorEmail,textViewErrorPassword)
+
+
+            if (email.isEmpty() || !instanceCommon.isValidEmail(email)){
+                instanceCommon.emailError(editTextEmail,textViewErrorEmail)
+            }
+            if (password.isEmpty() || password.length < 8){
+                instanceCommon.passwordError(editTextPassword,textViewErrorPassword)
+            }
+            else if( email.isNotEmpty() && instanceCommon.isValidEmail(email)
+                && password.isNotEmpty() && password.length > 8)
+                {
+                instanceCommon.toastWelcome(this,"userName")
+                instanceCommon.makeLoginCompletedTrue(sharedPreferences)
                 val intent = Intent(this,HomeActivity::class.java)
-
-            val editor = sharedPreferences.edit()
-            editor.putBoolean("LoginCompleted",false)
-            editor.apply()
-
                 startActivity(intent)
                 finish()
 
-            }else{
-                Toast.makeText(this,
-                    "Please make sure you enter correct information!",
-                    Toast.LENGTH_SHORT).show()
             }
         }
+
+    }
+
+    private fun init(){
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        editTextEmail = findViewById(R.id.edit_text_email)
+        editTextPassword = findViewById(R.id.editTextPassword)
+        textViewErrorEmail = findViewById(R.id.textInputErrorEmail)
+        textViewErrorPassword = findViewById(R.id.textInputErrorPassword)
+        textViewForgotPassword = findViewById(R.id.textViewForgotPassword)
+        textViewRegister = findViewById(R.id.textViewRegister)
+        buttonLogin = findViewById(R.id.buttonLogin)
+        visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
 
 
     }
 
 
-
-
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            super.onBackPressed()
             finishAffinity() //This will exit the app
         } else {
             doubleBackToExitPressedOnce = true
@@ -111,14 +120,16 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
+
     fun onRegisterClicked(view: android.view.View) {
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    fun onForgotClicked(view: android.view.View) {
 
+    fun onForgotClicked(view: android.view.View) {
+        // here code for forgot password
     }
 
 
