@@ -25,12 +25,14 @@ class Common {
         editTextUserName.setBackgroundResource(R.drawable.edit_text_error)
         textView.visibility = View.VISIBLE
     }
-    fun emailError( editTextEmail: EditText,textView: TextView){
+    fun emailError( editTextEmail: EditText,textView: TextView,validEmail:String = "Please enter your Email"){
         editTextEmail.setBackgroundResource(R.drawable.edit_text_error)
+        textView.text = validEmail
         textView.visibility = View.VISIBLE
     }
-    fun passwordError( editTextPassword: EditText,textView: TextView){
+    fun passwordError( editTextPassword: EditText,textView: TextView,validPassword:String = "Please enter your Password"){
         editTextPassword.setBackgroundResource(R.drawable.edit_text_error)
+        textView.text = validPassword
         textView.visibility = View.VISIBLE
     }
 

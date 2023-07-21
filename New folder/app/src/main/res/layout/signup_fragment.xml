@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Your layout goes here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            >
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="250dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:lottie_rawRes="@raw/signup"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+
+                />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="User Name"
+                android:textColor="#474E68"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edit_text_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:padding="15dp"
+                android:hint="UserName"
+                android:inputType="text"
+                android:textColor="@color/homeTextViewBackgroundDark"
+                android:textColorHint="@color/homeTextViewBackgroundDark"
+                android:drawableEnd="@drawable/ic_baseline_person_24"
+                android:drawableTint="#474E68"
+                android:textDirection="ltr"
+                android:textCursorDrawable="@drawable/cursor_color"
+                />
+            <TextView
+                android:id="@+id/textInputErrorUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Please enter your name"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:textSize="13sp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Email"
+                android:textColor="#474E68"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/corner"
+                android:padding="15dp"
+                android:hint="email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/homeTextViewBackgroundDark"
+                android:textColor="@color/homeTextViewBackgroundDark"
+                android:drawableEnd="@drawable/ic_baseline_email_24"
+                android:drawableTint="#474E68"
+                android:textDirection="ltr"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+            <TextView
+                android:id="@+id/textInputErrorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Please enter your email"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:textSize="13sp" />
+            />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Password"
+                android:textColor="#474E68"
+                android:textSize="22sp" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner"
+                    android:padding="15dp"
+                    android:hint="password"
+                    android:textColor="@color/homeTextViewBackgroundDark"
+                    android:textColorHint="@color/homeTextViewBackgroundDark"
+                    android:inputType="textPassword"
+                    android:textDirection="ltr"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    />
+
+                <ImageView
+                    android:id="@+id/visibilityToggleImageViewPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_visibility_off_24"
+                    android:layout_gravity="end|center_vertical"
+                    android:padding="25dp"
+                    app:tint="#474E68" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textInputErrorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="Please enter your password"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:textSize="13sp" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_submit"
+                android:layout_gravity="center"
+                android:background="@drawable/corner"
+                android:text="Sign Up"
+                android:textColor="#474E68"
+                android:textSize="32dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="You already registered?"
+
+                    android:textColor="#474E68"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:layout_marginLeft="200dp"
+                    android:text="Login"
+                    android:textColor="#474E68"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:onClick="onLoginClicked"
+                    />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

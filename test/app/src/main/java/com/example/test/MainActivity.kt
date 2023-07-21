@@ -60,11 +60,18 @@ class MainActivity : AppCompatActivity() {
             if (userName.isEmpty()){
                 instanceCommon.userNameError(editTextUserName,textViewErrorUserName)
             }
-            if (email.isEmpty() || !instanceCommon.isValidEmail(email)){
+            if (email.isEmpty()){
                 instanceCommon.emailError(editTextEmail,textViewErrorEmail)
             }
-            if (password.isEmpty() || password.length < 8){
+            if (email.isNotEmpty() && !instanceCommon.isValidEmail(email)){
+                instanceCommon.emailError(editTextEmail,textViewErrorEmail,"Please enter valid Email")
+            }
+            if (password.isEmpty()){
                 instanceCommon.passwordError(editTextPassword,textViewErrorPassword)
+            }
+            if (password.isNotEmpty()  && password.length < 8){
+                instanceCommon.passwordError(editTextPassword,textViewErrorPassword,"Please enter valid Password")
+
             }
             else if(userName.isNotEmpty() && email.isNotEmpty()
                 && instanceCommon.isValidEmail(email)
