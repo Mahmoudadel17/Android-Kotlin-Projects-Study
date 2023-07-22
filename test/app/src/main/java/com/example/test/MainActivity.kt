@@ -10,6 +10,7 @@ import android.os.Handler
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.*
+import androidx.core.content.ContextCompat
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,11 +42,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         init()
+        callBack()
+    }
 
-        // make under line for text that can be clickable
-        //----------------------------------------------------
-        textViewLogin.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
-
+    private fun callBack(){
         // when user click Sign Up button
         buttonSubmit.setOnClickListener {
 
@@ -60,30 +60,20 @@ class MainActivity : AppCompatActivity() {
             if (userName.isEmpty()){
                 instanceCommon.userNameError(editTextUserName,textViewErrorUserName)
             }
-            if (email.isEmpty()){
-                instanceCommon.emailError(editTextEmail,textViewErrorEmail)
-            }
-            if (email.isNotEmpty() && !instanceCommon.isValidEmail(email)){
-                instanceCommon.emailError(editTextEmail,textViewErrorEmail,"Please enter valid Email")
-            }
-            if (password.isEmpty()){
-                instanceCommon.passwordError(editTextPassword,textViewErrorPassword)
-            }
-            if (password.isNotEmpty()  && password.length < 8){
-                instanceCommon.passwordError(editTextPassword,textViewErrorPassword,"Please enter valid Password")
+            val checkEmailAndPassword  = instanceCommon.checkEmailAndPassword(email,password, editTextEmail,editTextPassword,
+                textViewErrorEmail,textViewErrorPassword)
 
-            }
-            else if(userName.isNotEmpty() && email.isNotEmpty()
-                && instanceCommon.isValidEmail(email)
-                && password.isNotEmpty() && password.length > 8)
-                {
+            if (checkEmailAndPassword && userName.isNotEmpty()){
+                // here write code for Sign Up using "cloud and database" firebase.
+
+                //-----------------------------------------------------------------
                 instanceCommon.toastWelcome(this,userName)
                 instanceCommon.makeLoginCompletedTrue(sharedPreferences)
                 val intent = Intent(this,HomeActivity::class.java)
                 startActivity(intent)
                 finish()
-
             }
+
 
 
 
@@ -112,14 +102,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-
     }
-
-
-
-
-
-
     private fun init(){
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
@@ -131,6 +114,11 @@ class MainActivity : AppCompatActivity() {
         textViewErrorEmail = findViewById(R.id.textInputErrorEmail)
         textViewErrorPassword = findViewById(R.id.textInputErrorPassword)
         buttonSubmit = findViewById(R.id.btn_submit)
+
+        // make under line for text that can be clickable
+        //----------------------------------------------------
+        textViewLogin.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
+
     }
 
     override fun onBackPressed() {

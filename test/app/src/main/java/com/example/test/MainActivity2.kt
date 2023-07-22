@@ -36,12 +36,10 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         init()
-        // make under line for text that can be clickable
-        //----------------------------------------------------
-        textViewRegister.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
-        textViewForgotPassword.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
+        callBack()
+    }
 
-
+    private fun callBack(){
         // when user click on icon visibility to show or hide password
         visibilityToggleImageViewPassword.setOnClickListener{
             isPasswordVisible = !isPasswordVisible
@@ -72,33 +70,21 @@ class MainActivity2 : AppCompatActivity() {
 
             instanceCommon.upDateEditTexts(editTextEmail,editTextPassword)
             instanceCommon.upDateTextViews(textViewErrorEmail,textViewErrorPassword)
+            val checkEmailAndPassword  = instanceCommon.checkEmailAndPassword(email,password, editTextEmail,editTextPassword,
+                textViewErrorEmail,textViewErrorPassword)
 
+            if (checkEmailAndPassword){
+                // here write code for Sign Login "cloud and database" firebase.
 
-            if (email.isEmpty()){
-                instanceCommon.emailError(editTextEmail,textViewErrorEmail)
-            }
-            if (email.isNotEmpty() && !instanceCommon.isValidEmail(email)){
-                instanceCommon.emailError(editTextEmail,textViewErrorEmail,"Please enter valid Email")
-            }
-            if (password.isEmpty()){
-                instanceCommon.passwordError(editTextPassword,textViewErrorPassword)
-            }
-            if (password.isNotEmpty()  && password.length < 8){
-                instanceCommon.passwordError(editTextPassword,textViewErrorPassword,"Please enter valid Password")
-
-            }
-            else if( email.isNotEmpty() && instanceCommon.isValidEmail(email)
-                && password.isNotEmpty() && password.length > 8)
-                {
+                //-----------------------------------------------------------------
                 instanceCommon.toastWelcome(this,"userName")
                 instanceCommon.makeLoginCompletedTrue(sharedPreferences)
                 val intent = Intent(this,HomeActivity::class.java)
                 startActivity(intent)
                 finish()
-
             }
-        }
 
+        }
     }
 
     private fun init(){
@@ -112,6 +98,10 @@ class MainActivity2 : AppCompatActivity() {
         buttonLogin = findViewById(R.id.buttonLogin)
         visibilityToggleImageViewPassword = findViewById(R.id.visibilityToggleImageViewPassword)
 
+        // make under line for text that can be clickable
+        //----------------------------------------------------
+        textViewRegister.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
+        textViewForgotPassword.paintFlags =  Paint.UNDERLINE_TEXT_FLAG
 
     }
 
