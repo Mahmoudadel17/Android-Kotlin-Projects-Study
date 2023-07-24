@@ -11,6 +11,7 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.*
 import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,13 +29,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var textViewErrorPassword:TextView
     lateinit var textViewLogin:TextView
     lateinit var buttonSubmit:Button
-
     private lateinit var visibilityToggleImageViewPassword: ImageView
+
     private var isPasswordVisible = false
 
     lateinit var userName:String
     lateinit var email:String
     lateinit var password:String
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,6 +104,9 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+
+
+
     }
     private fun init(){
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
