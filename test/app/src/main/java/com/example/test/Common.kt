@@ -43,22 +43,20 @@ class Common {
     }
     fun upDateTextViews(vararg textViews: TextView) {
         for (textView in textViews) {
-            textView.visibility = View.GONE
+            textView.text = ""
         }
     }
     fun userNameError(editTextUserName: EditText,textView: TextView){
         editTextUserName.setBackgroundResource(R.drawable.edit_text_error)
-        textView.visibility = View.VISIBLE
+        textView.text = "Please enter your Name"
     }
     private fun emailError(editTextEmail: EditText, textView: TextView, validEmail:String = "Please enter your Email"){
         editTextEmail.setBackgroundResource(R.drawable.edit_text_error)
         textView.text = validEmail
-        textView.visibility = View.VISIBLE
     }
     private fun passwordError(editTextPassword: EditText, textView: TextView, validPassword:String = "Please enter your Password"){
         editTextPassword.setBackgroundResource(R.drawable.edit_text_error)
         textView.text = validPassword
-        textView.visibility = View.VISIBLE
     }
     fun makeLoginCompletedTrue(sharedPreferences:SharedPreferences){
         // for login
