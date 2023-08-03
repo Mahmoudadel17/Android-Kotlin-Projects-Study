@@ -17,19 +17,19 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private var doubleBackToExitPressedOnce = false
 
-    lateinit var textViewRegister: TextView
-    lateinit var textViewForgotPassword: TextView
-    lateinit var editTextPassword:EditText
-    lateinit var editTextEmail:EditText
-    lateinit var textViewErrorEmail:TextView
-    lateinit var textViewErrorPassword:TextView
-    lateinit var buttonLogin:Button
+    private lateinit var textViewRegister: TextView
+    private lateinit var textViewForgotPassword: TextView
+    private lateinit var editTextPassword:EditText
+    private lateinit var editTextEmail:EditText
+    private lateinit var textViewErrorEmail:TextView
+    private lateinit var textViewErrorPassword:TextView
+    private lateinit var buttonLogin:Button
 
     private lateinit var visibilityToggleImageViewPassword: ImageView
     private var isPasswordVisible = false
 
-    lateinit var email:String
-    lateinit var password:String
+    private lateinit var email:String
+    private lateinit var password:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +74,7 @@ class MainActivity2 : AppCompatActivity() {
                 textViewErrorEmail,textViewErrorPassword)
 
             if (checkEmailAndPassword){
-                // here write code for Sign Login "cloud and database" firebase.
+                // here write code for Login "cloud and database" firebase.
 
                 //-----------------------------------------------------------------
                 instanceCommon.toastWelcome(this,"userName")
@@ -127,6 +127,9 @@ class MainActivity2 : AppCompatActivity() {
 
     fun onForgotClicked(view: android.view.View) {
         // here code for forgot password
+        val intent = Intent(this,ForgotPasswordActivity::class.java)
+        startActivity(intent)
+
     }
 
 

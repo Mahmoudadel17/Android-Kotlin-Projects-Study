@@ -11,6 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <item name="android:windowDisablePreview" >true</item>
         <!-- Customize your theme here. -->
         <!-- this line of code for change Status Bar Color for "black" -->
 <!--        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->

@@ -18,19 +18,19 @@ class Common {
     EditText, textViewErrorEmail:TextView,textViewErrorPassword:TextView,):Boolean {
         var checkEmailAndPassword = true
         if (email.isEmpty()){
-            emailError(editTextEmail,textViewErrorEmail)
+            editTextError(editTextEmail,textViewErrorEmail,"Please enter your Email")
             checkEmailAndPassword = false
         }
         if (email.isNotEmpty() && !isValidEmail(email)){
-            emailError(editTextEmail,textViewErrorEmail,"Please enter valid Email")
+            editTextError(editTextEmail,textViewErrorEmail,"Please enter valid Email")
             checkEmailAndPassword = false
         }
         if (password.isEmpty()){
-            passwordError(editTextPassword,textViewErrorPassword)
+            editTextError(editTextPassword,textViewErrorPassword,"Please enter your Password")
             checkEmailAndPassword = false
         }
         if (password.isNotEmpty()  && password.length < 8){
-            passwordError(editTextPassword,textViewErrorPassword,"Please enter valid Password")
+            editTextError(editTextPassword,textViewErrorPassword,"Please enter valid Password")
             checkEmailAndPassword = false
         }
         return checkEmailAndPassword
@@ -46,18 +46,13 @@ class Common {
             textView.text = ""
         }
     }
-    fun userNameError(editTextUserName: EditText,textView: TextView){
-        editTextUserName.setBackgroundResource(R.drawable.edit_text_error)
-        textView.text = "Please enter your Name"
+
+    fun editTextError(editText: EditText, textView: TextView, validString:String ){
+        editText.setBackgroundResource(R.drawable.edit_text_error)
+        textView.text = validString
+
     }
-    private fun emailError(editTextEmail: EditText, textView: TextView, validEmail:String = "Please enter your Email"){
-        editTextEmail.setBackgroundResource(R.drawable.edit_text_error)
-        textView.text = validEmail
-    }
-    private fun passwordError(editTextPassword: EditText, textView: TextView, validPassword:String = "Please enter your Password"){
-        editTextPassword.setBackgroundResource(R.drawable.edit_text_error)
-        textView.text = validPassword
-    }
+
     fun makeLoginCompletedTrue(sharedPreferences:SharedPreferences){
         // for login
         val editor = sharedPreferences.edit()
@@ -70,7 +65,7 @@ class Common {
         editor.putBoolean("LoginCompleted",false)
         editor.apply()
     }
-    private fun isValidEmail(email: String): Boolean {
+    fun isValidEmail(email: String): Boolean {
         // Regular expression pattern to validate the email format
         val pattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 

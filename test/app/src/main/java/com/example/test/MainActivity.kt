@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             instanceCommon.upDateTextViews(textViewErrorUserName,textViewErrorEmail,textViewErrorPassword)
 
             if (userName.isEmpty()){
-                instanceCommon.userNameError(editTextUserName,textViewErrorUserName)
+                instanceCommon.editTextError(editTextUserName,textViewErrorUserName,"Please enter your Name")
             }
             val checkEmailAndPassword  = instanceCommon.checkEmailAndPassword(email,password, editTextEmail,editTextPassword,
                 textViewErrorEmail,textViewErrorPassword)

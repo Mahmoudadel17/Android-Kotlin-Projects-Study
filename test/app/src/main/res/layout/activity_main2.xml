@@ -40,7 +40,7 @@
                 android:paddingLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:text="Email"
+                android:text="@string/Email"
                 android:textColor="#474E68"
                 android:textSize="22sp" />
 
@@ -51,7 +51,7 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/corner"
                 android:padding="15dp"
-                android:hint="email"
+                android:hint="@string/example_email"
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/homeTextViewBackgroundDark"
                 android:textColor="@color/homeTextViewBackgroundDark"
@@ -74,7 +74,7 @@
                 android:paddingLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Password"
+                android:text="@string/Password"
                 android:textColor="#474E68"
                 android:textSize="22sp" />
 
@@ -90,7 +90,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/corner"
                     android:padding="15dp"
-                    android:hint="password"
+                    android:hint="@string/password"
                     android:textColor="@color/homeTextViewBackgroundDark"
                     android:textColorHint="@color/homeTextViewBackgroundDark"
                     android:inputType="textPassword"
@@ -127,7 +127,7 @@
                 android:id="@+id/buttonLogin"
                 android:layout_gravity="center"
                 android:background="@drawable/corner"
-                android:text="Login"
+                android:text="@string/Login"
                 android:textColor="#474E68"
                 android:textSize="32dp"
                 />
@@ -144,7 +144,7 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:layout_marginLeft="10dp"
-                    android:text="New to the app?"
+                    android:text="@string/new_to_the_app"
                     android:textColor="#474E68"
                     android:textSize="12sp" />
 
@@ -154,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:layout_marginLeft="130dp"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:textColor="#474E68"
                     android:textSize="12sp"
                     android:clickable="true"
@@ -167,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
                     android:layout_marginLeft="220dp"
-                    android:text="Forgot password?"
+                    android:text="@string/forgot_password"
                     android:textColor="#474E68"
                     android:textSize="12sp"
                     android:clickable="true"

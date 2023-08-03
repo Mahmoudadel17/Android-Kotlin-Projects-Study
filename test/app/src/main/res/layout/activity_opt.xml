@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityOPT"
+    android:background="@color/white">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_otp"
+        android:layout_width="250dp"
+        android:layout_height="211dp"
+        android:layout_margin="60dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/otp_code"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edit_text_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corner"
+        android:drawableEnd="@drawable/ic_baseline_email_24"
+        android:drawableTint="#474E68"
+        android:hint="Please enter OTP code"
+        android:inputType="textEmailAddress"
+        android:maxLength="6"
+        android:padding="15dp"
+        android:textColor="@color/homeTextViewBackgroundDark"
+        android:textColorHint="@color/homeTextViewBackgroundDark"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textDirection="ltr"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_otp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textInputErrorOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:textColor="#FF0000"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_otp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_verify"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/corner"
+        android:text="@string/verify"
+        android:textColor="#474E68"
+        android:textSize="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/textInputErrorOTP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

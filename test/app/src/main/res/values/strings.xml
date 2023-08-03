@@ -2,4 +2,24 @@
     <string name="app_name">To Do</string>
     <string name="to_do">TO DO</string>
     <string name="splash_text">Manage Your Day</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="register">Register</string>
+    <string name="new_to_the_app">New to the app?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="Email">Email</string>
+    <string name="User_name">User Name</string>
+    <string name="user_name">username</string>
+    <string name="example_email">example@gmail.com</string>
+    <string name="reset_password_note">*We will send you an email that will allow you to reset your password.</string>
+    <string name="verify">Verify</string>
+    <string name="reset_password">Reset Password</string>
+
 </resources>
